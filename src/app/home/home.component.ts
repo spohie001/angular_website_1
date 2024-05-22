@@ -17,6 +17,11 @@ export class HomeComponent implements OnInit{
   ){}
 
   products: Product[] = [];
+
+  onProductOutput(product: Product){
+    console.log(product, 'Output');
+
+  }
   ngOnInit(){
     this.productsService
     .getProducts('http://localhost:3000/clothes',
